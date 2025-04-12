@@ -6,6 +6,13 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		904D82712DAAC95F00EEAF7E /* Clocks in Frameworks */ = {isa = PBXBuildFile; productRef = 904D82702DAAC95F00EEAF7E /* Clocks */; };
+		904D82732DAAC96F00EEAF7E /* CombineSchedulers in Frameworks */ = {isa = PBXBuildFile; productRef = 904D82722DAAC96F00EEAF7E /* CombineSchedulers */; };
+		904D82762DAAC97B00EEAF7E /* ConcurrencyExtras in Frameworks */ = {isa = PBXBuildFile; productRef = 904D82752DAAC97B00EEAF7E /* ConcurrencyExtras */; };
+		904D82792DAACAB500EEAF7E /* Dependencies in Frameworks */ = {isa = PBXBuildFile; productRef = 904D82782DAACAB500EEAF7E /* Dependencies */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		900E8DCF2DAA0EE40073F374 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -52,6 +59,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				904D82762DAAC97B00EEAF7E /* ConcurrencyExtras in Frameworks */,
+				904D82732DAAC96F00EEAF7E /* CombineSchedulers in Frameworks */,
+				904D82712DAAC95F00EEAF7E /* Clocks in Frameworks */,
+				904D82792DAACAB500EEAF7E /* Dependencies in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +123,10 @@
 			);
 			name = "Crypto-IOS";
 			packageProductDependencies = (
+				904D82702DAAC95F00EEAF7E /* Clocks */,
+				904D82722DAAC96F00EEAF7E /* CombineSchedulers */,
+				904D82752DAAC97B00EEAF7E /* ConcurrencyExtras */,
+				904D82782DAACAB500EEAF7E /* Dependencies */,
 			);
 			productName = "Crypto-IOS";
 			productReference = 900E8DBE2DAA0EE30073F374 /* Crypto-IOS.app */;
@@ -195,6 +210,12 @@
 			);
 			mainGroup = 900E8DB52DAA0EE30073F374;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				901F746F2DAA247E00ABC1A0 /* XCRemoteSwiftPackageReference "combine-schedulers" */,
+				901F74702DAA250100ABC1A0 /* XCRemoteSwiftPackageReference "swift-clocks" */,
+				904D82742DAAC97B00EEAF7E /* XCRemoteSwiftPackageReference "swift-concurrency-extras" */,
+				904D82772DAACAB500EEAF7E /* XCRemoteSwiftPackageReference "swift-dependencies" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 900E8DBF2DAA0EE30073F374 /* Products */;
 			projectDirPath = "";
@@ -552,6 +573,64 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		901F746F2DAA247E00ABC1A0 /* XCRemoteSwiftPackageReference "combine-schedulers" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/combine-schedulers";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.3;
+			};
+		};
+		901F74702DAA250100ABC1A0 /* XCRemoteSwiftPackageReference "swift-clocks" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-clocks";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.6;
+			};
+		};
+		904D82742DAAC97B00EEAF7E /* XCRemoteSwiftPackageReference "swift-concurrency-extras" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-concurrency-extras";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.3.1;
+			};
+		};
+		904D82772DAACAB500EEAF7E /* XCRemoteSwiftPackageReference "swift-dependencies" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-dependencies";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.9.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		904D82702DAAC95F00EEAF7E /* Clocks */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 901F74702DAA250100ABC1A0 /* XCRemoteSwiftPackageReference "swift-clocks" */;
+			productName = Clocks;
+		};
+		904D82722DAAC96F00EEAF7E /* CombineSchedulers */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 901F746F2DAA247E00ABC1A0 /* XCRemoteSwiftPackageReference "combine-schedulers" */;
+			productName = CombineSchedulers;
+		};
+		904D82752DAAC97B00EEAF7E /* ConcurrencyExtras */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 904D82742DAAC97B00EEAF7E /* XCRemoteSwiftPackageReference "swift-concurrency-extras" */;
+			productName = ConcurrencyExtras;
+		};
+		904D82782DAACAB500EEAF7E /* Dependencies */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 904D82772DAACAB500EEAF7E /* XCRemoteSwiftPackageReference "swift-dependencies" */;
+			productName = Dependencies;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 900E8DB62DAA0EE30073F374 /* Project object */;
 }
