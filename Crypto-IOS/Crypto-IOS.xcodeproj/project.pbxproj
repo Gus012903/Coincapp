@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		90430DB42DB9B09D00C7F8FB /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 90430DB32DB9B09D00C7F8FB /* FirebaseAnalytics */; };
+		90430DB62DB9B09D00C7F8FB /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 90430DB52DB9B09D00C7F8FB /* FirebaseAuth */; };
+		90430DB82DB9B09D00C7F8FB /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = 90430DB72DB9B09D00C7F8FB /* FirebaseCore */; };
+		90430DBA2DB9B09D00C7F8FB /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 90430DB92DB9B09D00C7F8FB /* FirebaseFirestore */; };
 		904D82712DAAC95F00EEAF7E /* Clocks in Frameworks */ = {isa = PBXBuildFile; productRef = 904D82702DAAC95F00EEAF7E /* Clocks */; };
 		904D82732DAAC96F00EEAF7E /* CombineSchedulers in Frameworks */ = {isa = PBXBuildFile; productRef = 904D82722DAAC96F00EEAF7E /* CombineSchedulers */; };
 		904D82762DAAC97B00EEAF7E /* ConcurrencyExtras in Frameworks */ = {isa = PBXBuildFile; productRef = 904D82752DAAC97B00EEAF7E /* ConcurrencyExtras */; };
@@ -36,9 +40,35 @@
 		900E8DD82DAA0EE40073F374 /* Crypto-IOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Crypto-IOSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		90829CC72DBB2C0700B99504 /* Exceptions for "Crypto-IOS" folder in "Crypto-IOS" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Models/AssetResponse.swift,
+				ViewModels/FavouritesViewModel.swift,
+			);
+			target = 900E8DBD2DAA0EE30073F374 /* Crypto-IOS */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
+		90829CC82DBB2C0700B99504 /* Exceptions for "Crypto-IOS" folder in "Copy Bundle Resources" phase from "Crypto-IOS" target */ = {
+			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
+			buildPhase = 900E8DBC2DAA0EE30073F374 /* Resources */;
+			membershipExceptions = (
+				Models/AssetResponse.swift,
+				ViewModels/FavouritesViewModel.swift,
+			);
+		};
+/* End PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		900E8DC02DAA0EE30073F374 /* Crypto-IOS */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				90829CC72DBB2C0700B99504 /* Exceptions for "Crypto-IOS" folder in "Crypto-IOS" target */,
+				90829CC82DBB2C0700B99504 /* Exceptions for "Crypto-IOS" folder in "Copy Bundle Resources" phase from "Crypto-IOS" target */,
+			);
 			path = "Crypto-IOS";
 			sourceTree = "<group>";
 		};
@@ -60,8 +90,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				904D82762DAAC97B00EEAF7E /* ConcurrencyExtras in Frameworks */,
+				90430DB62DB9B09D00C7F8FB /* FirebaseAuth in Frameworks */,
 				904D82732DAAC96F00EEAF7E /* CombineSchedulers in Frameworks */,
 				904D82712DAAC95F00EEAF7E /* Clocks in Frameworks */,
+				90430DB82DB9B09D00C7F8FB /* FirebaseCore in Frameworks */,
+				90430DBA2DB9B09D00C7F8FB /* FirebaseFirestore in Frameworks */,
+				90430DB42DB9B09D00C7F8FB /* FirebaseAnalytics in Frameworks */,
 				904D82792DAACAB500EEAF7E /* Dependencies in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -127,6 +161,10 @@
 				904D82722DAAC96F00EEAF7E /* CombineSchedulers */,
 				904D82752DAAC97B00EEAF7E /* ConcurrencyExtras */,
 				904D82782DAACAB500EEAF7E /* Dependencies */,
+				90430DB32DB9B09D00C7F8FB /* FirebaseAnalytics */,
+				90430DB52DB9B09D00C7F8FB /* FirebaseAuth */,
+				90430DB72DB9B09D00C7F8FB /* FirebaseCore */,
+				90430DB92DB9B09D00C7F8FB /* FirebaseFirestore */,
 			);
 			productName = "Crypto-IOS";
 			productReference = 900E8DBE2DAA0EE30073F374 /* Crypto-IOS.app */;
@@ -215,6 +253,7 @@
 				901F74702DAA250100ABC1A0 /* XCRemoteSwiftPackageReference "swift-clocks" */,
 				904D82742DAAC97B00EEAF7E /* XCRemoteSwiftPackageReference "swift-concurrency-extras" */,
 				904D82772DAACAB500EEAF7E /* XCRemoteSwiftPackageReference "swift-dependencies" */,
+				90430DB22DB9B09D00C7F8FB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 900E8DBF2DAA0EE30073F374 /* Products */;
@@ -591,6 +630,14 @@
 				minimumVersion = 1.0.6;
 			};
 		};
+		90430DB22DB9B09D00C7F8FB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.12.0;
+			};
+		};
 		904D82742DAAC97B00EEAF7E /* XCRemoteSwiftPackageReference "swift-concurrency-extras" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/pointfreeco/swift-concurrency-extras";
@@ -610,6 +657,26 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		90430DB32DB9B09D00C7F8FB /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 90430DB22DB9B09D00C7F8FB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		90430DB52DB9B09D00C7F8FB /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 90430DB22DB9B09D00C7F8FB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		90430DB72DB9B09D00C7F8FB /* FirebaseCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 90430DB22DB9B09D00C7F8FB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCore;
+		};
+		90430DB92DB9B09D00C7F8FB /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 90430DB22DB9B09D00C7F8FB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
 		904D82702DAAC95F00EEAF7E /* Clocks */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 901F74702DAA250100ABC1A0 /* XCRemoteSwiftPackageReference "swift-clocks" */;

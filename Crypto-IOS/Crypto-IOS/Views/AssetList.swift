@@ -4,6 +4,7 @@ struct AssetList: View {
     
     var viewModel: AssetListViewModel = .init()
 
+//    @State var task: Task<Void, Never>?
     
     var body: some View {
         NavigationStack {
@@ -13,7 +14,7 @@ struct AssetList: View {
             List {
                 ForEach(viewModel.assets) { asset in
                     NavigationLink {
-                        AssetDetailView(asset: asset)
+                        AssetDetailView(viewModel: .init(asset: asset))
                     } label: {
                         AssetView(assetViewState: .init(asset))
                     }
@@ -26,7 +27,6 @@ struct AssetList: View {
             .navigationTitle("Home")
             
         }
-       
     }
 }
 
